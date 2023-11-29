@@ -75,7 +75,7 @@ common:
 然后命令行直接运行：
 
 ```bash
-python ai_translator/main.py
+python pdf_translator/main.py
 ```
 
 ![sample_out](images/sample_image_1.png)

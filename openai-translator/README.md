@@ -76,7 +76,7 @@ common:
 Then run the tool:
 
 ```bash
-python ai_translator/main.py
+python pdf_translator/main.py
 ```
 
 ![sample_out](images/sample_image_1.png)
@@ -88,7 +88,7 @@ You can also specify the settings directly on the command line. Here's an exampl
 ```bash
 # Set your api_key as an env variable
 export OPENAI_API_KEY="sk-xxx"
-python ai_translator/main.py --model_type OpenAIModel --openai_api_key $OPENAI_API_KEY --book your_book.pdf 
+python pdf_translator/main.py --model_type OpenAIModel --openai_api_key $OPENAI_API_KEY --book your_book.pdf 
 ```
 
 And an example of how to use the GLM model:
@@ -96,7 +96,7 @@ And an example of how to use the GLM model:
 ```bash
 # Set your GLM Model URL as an env variable
 export GLM_MODEL_URL="http://xxx:xx"
-python ai_translator/main.py --model_type GLMModel --glm_model_url $GLM_MODEL_URL --book your_book.pdf 
+python pdf_translator/main.py --model_type GLMModel --glm_model_url $GLM_MODEL_URL --book your_book.pdf 
 ```
 
 ## License
