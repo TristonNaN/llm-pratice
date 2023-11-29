@@ -3,7 +3,7 @@ import logging
 
 
 class MyLogger:
-    def __init__(self, name="pdf_translator", log_dir="logs", debug=False, save_to_file=False):
+    def __init__(self, name="openai_translator", log_dir="logs", debug=False, save_to_file=False):
         # 设置日志级别
         level = logging.DEBUG if debug else logging.INFO
         logging.basicConfig(level=level, format='%(asctime)s - %(levelname)s - %(message)s')
