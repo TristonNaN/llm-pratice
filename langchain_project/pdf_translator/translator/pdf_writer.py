@@ -1,3 +1,5 @@
+
+
 from reportlab.lib import pagesizes, colors
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.pdfbase import pdfmetrics
@@ -13,10 +15,15 @@ class PDFWriter:
     def __init__(self):
         pass
 
-    def save_book(self, book: Book, output_file_path: str = None, file_format: str = "PDF"):
+    def save_book(self, book: Book, input_file_path: str, output_file_path: str = None, file_format: str = "pdf"):
+
         if file_format.lower() == "pdf":
+            if output_file_path is None:
+                output_file_path = input_file_path.replace('.pdf', f'_translated.pdf')
             self._save_translated_book_pdf(book, output_file_path)
         elif file_format.lower() == "markdown":
+            if output_file_path is None:
+                output_file_path = input_file_path.replace('.pdf', f'_translated.md')
             self._save_translated_book_markdown(book, output_file_path)
         else:
             raise ValueError(f"Unsupported file format: {file_format}")

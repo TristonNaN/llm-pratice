@@ -56,7 +56,6 @@ class TextContent(Content):
 class TableContent(Content):
 
     def __init__(self, original):
-        # todo: 有点问题, 这里的original是list
         df = pd.DataFrame(original)
         super().__init__(ContentType.TABLE, df)
 

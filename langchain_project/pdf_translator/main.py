@@ -11,5 +11,9 @@ if __name__ == "__main__":
 
     # 实例化 PDFTranslator 类，并调用 translate_pdf() 方法
     translator = PDFTranslator(translator_chain)
-    translator.translate_pdf(args.file_path, args.output_file_path, args.output_file_format)
+    translator.translate_pdf(args.input_file_path,
+                             source_language=args.source_language,
+                             target_language=args.target_language,
+                             output_file_format=args.output_file_format,
+                             output_file_path=args.output_file_path)
 
